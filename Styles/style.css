@@ -1,4 +1,4 @@
-@font-face { font-family: roboto-mono;  src: url(./Fonts/RobotoMono-Italic-VariableFont_wght.ttf); } 
+@font-face { font-family: roboto-mono;  src: url('Roboto_Mono/static/RobotoMono-Regular.ttf'); } 
 
 body {
     margin: 0;
@@ -34,11 +34,18 @@ body {
     cursor: pointer;
 }
 
-
-.header-item-1, .header-item-2, .header-item-3:hover ~ .header-item-1-dropdown {
-    visibility: visible;
+.header-item-1, .header-item-2, .header-item-3:hover {
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
+.header-item-1:hover ~ .header-item-1-dropdown {
+    visibility: visible;
+}
+.header-item-2:hover ~ .header-item-2-dropdown {
+    visibility: visible;
+}
+.header-item-3:hover ~ .header-item-3-dropdown {
+    visibility: visible;
 }
 .header-item-1-dropdown {
     width: 200px;
@@ -50,9 +57,37 @@ body {
     animation: zoomIn 1s liner;
     z-index: 1;
 }
-
+.header-item-2-dropdown {
+    width: 200px;
+    background-color: white;
+    visibility: hidden;
+    position: absolute;
+    top: 35px;
+    left: -50%;
+    animation: zoomIn 1s liner;
+    z-index: 1;
+}
+.header-item-3-dropdown {
+    width: 200px;
+    background-color: white;
+    visibility: hidden;
+    position: absolute;
+    top: 35px;
+    left: -50%;
+    animation: zoomIn 1s liner;
+    z-index: 1;
+}
 
 .header-item-1-dropdown > ul {
+    margin: 0;
+    padding: 0;
+    padding: 20px 15px;
+}
+.header-item-2-dropdown > ul {
+    margin: 0;
+    padding: 0;
+    padding: 20px 15px;
+}.header-item-3-dropdown > ul {
     margin: 0;
     padding: 0;
     padding: 20px 15px;
@@ -65,15 +100,27 @@ body {
     padding-bottom: 10px;
 }
 
+.header-item-2-dropdown > ul > li {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}.header-item-3-dropdown > ul > li {
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
 }
+
 .header-item:not(:last-child) {
     margin-right: 60px;
 }
+
 li {
     display: inline;
     color: #55375a;
-   
 }
+
 .nav-label {
     position: absolute;
     right: 20px;
@@ -82,9 +129,11 @@ li {
     user-select: none;
     cursor: pointer;
 }
+
 #nav {
     display: none;
 }
+
 .navbar {
     position: absolute;
     width: 350px;
@@ -93,16 +142,19 @@ li {
     top: 0;
     left: 0;
 }
+
 .slider {
     width: 100%;
     height: 500px;
     position: relative;
 }
+
 .slider-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .slider-button {
     position: absolute;
     background-color: white;
@@ -218,13 +270,10 @@ footer{
     border-left:none;
     border-bottom: none;
     border-right: none;
-    border-color:#e9bbff;
+    border-color:#b59ac2;
     background-color: #f6e3ff;
 }
-footer p {
-    margin-right: 110px;
-}
-}
+
 .socMedia{
     width: 100px;
     justify-content: space-between;
