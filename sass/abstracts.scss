@@ -1,0 +1,11 @@
+@mixin centerAbsElement {
+    left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin btnChange {
+    box-shadow: 0px 10px 10px #423b33;
+	transform: translate(-50%, -50%);
+    
+}
